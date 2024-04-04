@@ -1,0 +1,16 @@
+@import './fonts';
+@import './utils';
+@import './theme';
+@import './store';
+@import './quotes/styles.scss';
+@import './reward/styles.scss';
+@import './blocks/styles.scss';
+@import './recommend-product/styles.scss';
+
+.amote-app {
+	all: unset;
+	display: block;
+	font-family: inherit;
+	box-sizing: border-box;
+	width: 100%;
+}

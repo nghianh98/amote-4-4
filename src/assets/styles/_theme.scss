@@ -1,0 +1,234 @@
+body {
+	// QUOTE
+	&[amote-quote='true'] {
+		.cart__footer,
+		.drawer__footer {
+			.cart__ctas {
+				flex-direction: column;
+				flex-flow: wrap;
+				.amote-app {
+					max-width: 100%;
+				}
+			}
+		}
+
+		// max-width: 100%;
+		#CartDrawer,
+		#shopify-section-quick-cart,
+		#UpcartPopup,
+		#mini-cart,
+		.fcsb-mini-cart-button-bar,
+		#mini__cart .cart-btn-container,
+		.popup-cart__buttons,
+		&[amote-shop='groomerking.myshopify.com'] .cart-form,
+		&[amote-shop='hydroblast-2012.myshopify.com'] .cart__footer .cart__blocks,
+		&[amote-shop='cwe-store-3190.myshopify.com'] .cart__checkout-wrapper,
+		&[amote-shop='easylace-8178.myshopify.com'],
+		&[amote-shop='atomiclabatory.myshopify.com'] {
+			.amote-app[widget='quote'] {
+				max-width: 100%;
+			}
+		}
+
+		.cart__footer,
+		.drawer__footer {
+			.cart__ctas {
+				flex-direction: column;
+				flex-flow: wrap;
+				.amote-app {
+					max-width: 100%;
+				}
+			}
+		}
+
+		// by store
+		&[amote-shop='thomas-cosmetics-7050.myshopify.com'] {
+			.amote-app {
+				&[widget='quote'] {
+					margin: 16px auto;
+					max-width: 288px;
+
+					.quote-content {
+						white-space: initial;
+					}
+				}
+			}
+
+			.cart_calculator .amote-app {
+				&[widget='quote'] {
+					max-width: 370px;
+				}
+			}
+		}
+
+		&[amote-shop='sgmechswitches.myshopify.com'] {
+			.product-form__controls-group .amote-app {
+				display: none;
+			}
+
+			.cart__submit-controls {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+		}
+
+		&[amote-shop='el3bs7us.myshopify.com'] {
+			#cart_reload .amote-app[widget='quote'] {
+				max-width: 360px;
+				margin: 16px auto;
+				padding: 20px 20px 20px 56px !important;
+			}
+		}
+
+		&[amote-shop='goodsinners-co.myshopify.com'] {
+			.mini-cart .amote-app[widget='quote'] {
+				max-width: 88%;
+				margin: 16px auto;
+			}
+		}
+
+		&[amote-shop='born-savage-shop.myshopify.com'] {
+			.cart__submit-controls {
+				flex-direction: column;
+				align-items: flex-end;
+			}
+		}
+
+		#corner-cowi-cart-wrapper {
+			.amote-app {
+				&[widget='quote'] {
+					max-width: 92%;
+					margin: 16px auto;
+				}
+			}
+		}
+
+		.js-minicart {
+			.mini-content {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				.mini-cart-bottom,
+				form {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					overflow: hidden;
+
+					.prod {
+						height: 100%;
+					}
+
+					.sub-total {
+						height: 80px;
+						bottom: unset;
+						position: unset;
+					}
+
+					.action-checkout {
+						bottom: unset;
+						position: unset;
+					}
+				}
+			}
+		}
+	}
+
+	// REWARD
+	&[amote-reward='true'] {
+		.amote-label-free {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 20px;
+			background: #0ca127;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.15);
+			border-radius: 99px;
+			color: #ffffff;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 16px;
+			position: absolute;
+			top: -10px;
+			left: 8.5px;
+		}
+
+		// by theme id
+		&[amote-theme-id='887'] {
+			&[amote-reward-reached='true'] {
+				.cart-drawer__footer .tax-note {
+					text-align: center;
+				}
+			}
+		}
+
+		&[amote-cartpage-empty='true'] {
+			.amote-app[cart-type='cartPage'] {
+				display: none !important;
+			}
+		}
+
+		cart-drawer-items.is-empty {
+			.amote-app[widget='reward'] {
+				display: none !important;
+			}
+		}
+
+		#main-cart-footer .discounts.list-unstyled {
+			display: block !important;
+		}
+
+		&[amote-theme-id='857'] {
+			.amote-app[cart-type='cartDrawer'][widget='reward'] {
+				--top-start-gift-box: 169px !important;
+			}
+		}
+
+		&[amote-theme-id='847'] {
+			.amote-app[widget='reward'][cart-type='cartPage'][reward-type='progress-bar'] {
+				background-color: #fff;
+				color: #222;
+
+				&::before {
+					background-color: #fff;
+				}
+			}
+
+			.amote-app[widget='reward'][reward-type='free-gift'] {
+				color: #222;
+			}
+		}
+
+		&[amote-theme-id='855'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				margin-bottom: 0px;
+			}
+		}
+
+		&[amote-theme-id='871'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				margin-bottom: 0px;
+			}
+		}
+
+		// padding progress bar
+		&[amote-theme-id='857'],
+		&[amote-theme-id='847'],
+		&[amote-theme-id='871'],
+		&[amote-theme-id='1654'],
+		&[amote-theme-id='1500'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				padding: 24px 10px 32px;
+			}
+		}
+
+		// discount-totals text-align center cartPage
+		&[amote-theme-id='871'] {
+			.amote-app[widget='reward'][reward-type='discount-totals'][cart-type='cartPage'] {
+				text-align: center;
+			}
+		}
+	}
+}

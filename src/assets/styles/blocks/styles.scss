@@ -1,0 +1,231 @@
+$cdnUrl: 'https://cdn.amote.app/assets';
+
+product-info,
+.product {
+	div[class*='amote-'][class*='-content'] {
+		max-width: 44rem;
+	}
+}
+
+.amote-app {
+	&[widget='product-block'] {
+		--icon-tick: url('#{$cdnUrl}/quotes/preview-editor-tick.svg');
+		--icon-star: url('#{$cdnUrl}/quotes/preview-editor-star-filled.svg');
+		--icon-status-active: url('#{$cdnUrl}/quotes/preview-editor-status-active.svg');
+		--icon-pin-unfilled: url('#{$cdnUrl}/quotes/preview-editor-pin-unfilled.svg');
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+		}
+
+		max-width: 44rem;
+		margin: 24px auto;
+
+		&[type='payment_badges'],
+		&[type='trust_badges'] {
+			padding: 24px 8px;
+
+			h2 {
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 21px;
+				letter-spacing: 0em;
+				text-align: center;
+			}
+
+			> div {
+				display: flex;
+				gap: 16px 12px;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-top: 24px;
+			}
+		}
+
+		&[type='payment_badges'] {
+			img {
+				width: 46px;
+			}
+		}
+
+		&[type='trust_badges'] {
+			img {
+				width: 48px;
+			}
+		}
+
+		// block info
+		&[type='shipping_info'],
+		&[type='refund_info'],
+		&[type='additional_info'] {
+			border: 1px solid #d9d9d9;
+			border-radius: 8px;
+			width: 100%;
+
+			.amote-block-info {
+				&__wrapper {
+					padding: 16px;
+					display: flex;
+					flex-direction: column;
+				}
+
+				&__heading {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+
+					span {
+						display: block;
+						width: 24px;
+						height: 24px;
+						border-radius: 4px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					h2 {
+						font-weight: 500;
+						font-size: 16px;
+					}
+				}
+
+				&__desc {
+					ul {
+						padding-left: 16px !important;
+						li {
+							// display: flex;
+							// gap: 8px;
+							// padding-left: 18px;
+							// position: relative;
+
+							// &:before {
+							//     content: '';
+							//     display: block;
+							//     position: absolute;
+							//     top: 6px;
+							//     left: -4px;
+							//     width: 18px;
+							//     height: 18px;
+							//     background-position: center;
+							//     background-image: var(--icon-tick);
+							//     background-size: 100%;
+							//     background-repeat: no-repeat;
+							// }
+						}
+					}
+
+					ol {
+						padding-inline-start: 18px !important;
+					}
+				}
+			}
+
+			&[template='comfortable'] {
+				border-color: transparent;
+				background-image: linear-gradient(135deg, #1cd9d9 0%, #70d50e 100%);
+				border-radius: 8px;
+
+				.amote-block-info {
+					&__wrapper {
+						background-color: #f8f8f8;
+						border-radius: 7px;
+						color: #121212;
+					}
+
+					&__heading {
+						span {
+							background-color: #e8f8eb;
+						}
+					}
+				}
+			}
+		}
+
+		// &[type="shipping_info"] {
+		//     &[template="comfortable"] {
+		//         .amote-block-info {
+
+		//             &__desc {
+		//                 ul {
+		//                     li {
+		//                         padding-left: 16px;
+		//                         &:before {
+		//                             top: 10px;
+		//                             left: 0px;
+		//                             width: 8px;
+		//                             height: 8px;
+		//                             background-image: var(--icon-status-active);
+		//                         }
+		//                     }
+		//                 }
+		//             }
+		//         }
+		//     }
+		// }
+
+		// &[type="refund_info"] {
+		//     &[template="comfortable"] {
+		//         .amote-block-info {
+		//             &__desc {
+		//                 ul {
+		//                     li {
+		//                         padding-left: 14px;
+		//                         &:before {
+		//                             top: 10px;
+		//                             left: 0px;
+		//                             width: 6px;
+		//                             height: 6px;
+		//                             background-image: var(--icon-star);
+		//                         }
+		//                     }
+		//                 }
+		//             }
+		//         }
+		//     }
+		// }
+
+		// &[type="additional_info"] {
+		//     &[template="comfortable"] {
+		//         .amote-block-info {
+		//             &__desc {
+		//                 ul {
+		//                     li {
+		//                         padding-left: 14px;
+		//                         &:before {
+		//                             top: 5px;
+		//                             left: 0px;
+		//                             width: 8px;
+		//                             background-image: var(--icon-pin-unfilled);
+		//                         }
+		//                     }
+		//                 }
+		//             }
+		//         }
+		//     }
+		// }
+	}
+}
+
+section {
+	.product,
+	product-info {
+		.amote-app {
+			&[widget='product-block'] {
+				&[type='payment_badges'],
+				&[type='trust_badges'] {
+					border-bottom: 1px solid #e1e3e5;
+				}
+			}
+		}
+	}
+}

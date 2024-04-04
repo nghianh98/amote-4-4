@@ -1,0 +1,68 @@
+// App
+$cdnUrl: 'https://cdn.amote.app/assets';
+
+// Screen
+$xsWidth: 407px;
+$smWidth: 557px;
+$mdWidth: 749px;
+$lgWidth: 973px;
+$xlWidth: 1181px;
+$xxlWidth: 1347px;
+
+// Function
+@function mathScreen($widthType, $width) {
+	@if $widthType == 'min' {
+		@return $width + 1;
+	} @else {
+		@return $width;
+	}
+}
+
+// Mixin
+@mixin media($screen, $widthType: 'max') {
+	@if $screen == XS {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $xsWidth)) {
+			@content;
+		}
+	} @else if $screen == XS-BTW {
+		@media only screen and (min-width: mathScreen('min', $xsWidth)) and (max-width: $smWidth) {
+			@content;
+		}
+	} @else if $screen == SM {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $smWidth)) {
+			@content;
+		}
+	} @else if $screen == SM-BTW {
+		@media only screen and (min-width: mathScreen('min', $smWidth)) and (max-width: $mdWidth) {
+			@content;
+		}
+	} @else if $screen == MD {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $mdWidth)) {
+			@content;
+		}
+	} @else if $screen == MD-BTW {
+		@media only screen and (min-width: mathScreen('min', $mdWidth)) and (max-width: $lgWidth) {
+			@content;
+		}
+	} @else if $screen == LG {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $lgWidth)) {
+			@content;
+		}
+	} @else if $screen == LG-BTW {
+		@media only screen and (min-width: mathScreen('min', $lgWidth)) and (max-width: $xlWidth) {
+			@content;
+		}
+	} @else if $screen == XL {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $xlWidth)) {
+			@content;
+		}
+	} @else if $screen == XL-BTW {
+		@media only screen and (min-width: mathScreen('min', $xlWidth)) and (max-width: $xxlWidth) {
+			@content;
+		}
+	} @else if $screen == XXL {
+		@media only screen and (#{$widthType}-width: mathScreen($widthType, $xxlWidth)) {
+			@content;
+		}
+	}
+}

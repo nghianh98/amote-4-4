@@ -1,0 +1,144 @@
+body {
+	// REWARD
+	&[amote-reward='true'] {
+		// padding progress bar
+		&[amote-shop='atomiclabatory.myshopify.com'],
+		&[amote-shop='nubrox.myshopify.com'],
+		&[amote-shop='kenz-jewel.myshopify.com'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				padding: 24px 10px 32px;
+			}
+		}
+
+		// discount-totals text-align center cartPage
+		&[amote-shop='skipthefamearchive.myshopify.com'],
+		&[amote-shop='nubrox.myshopify.com'],
+		&[amote-shop='atomiclabatory.myshopify.com'],
+		&[amote-shop='easylace-8178.myshopify.com'] {
+			.amote-app[widget='reward'][reward-type='discount-totals'][cart-type='cartPage'] {
+				text-align: center;
+			}
+		}
+
+		// by store
+		&[amote-shop='luxe-cosmetics-6273.myshopify.com'] {
+			.amote-app[cart-type='cartDrawer'][widget='reward'] {
+				&[reward-type='progress-bar'] {
+					padding: 24px 20px 32px;
+					--left-start-gift-box: 743px !important;
+					--left-end-gift-box: calc(743px + 220px) !important;
+				}
+
+				&[reward-type='discount'] {
+					width: calc(100% - 40px);
+
+					.reward-discount__icon {
+						display: flex !important;
+					}
+				}
+			}
+		}
+
+		&[amote-shop='royal-balance-apparel-3137.myshopify.com'] {
+			.amote-app[widget='reward'][cart-type='cartPage'][reward-type='progress-bar'] {
+				border-right: 2px dashed #c4c4c4;
+
+				&::before {
+					border-left: 2px dashed #c4c4c4;
+				}
+			}
+		}
+
+		&[amote-shop='truffe-delice.myshopify.com'] {
+			.amote-app[widget='reward'][cart-type='cartDrawer'][reward-type='discount'] {
+				padding: 8px 10px;
+			}
+		}
+
+		&[amote-shop='impale-wear.myshopify.com'] {
+			.amote-app[widget='reward'] {
+				&[reward-type='progress-bar'],
+				&[reward-type='free-gift'] {
+					color: #222;
+				}
+
+				&[widget='reward'][cart-type='cartPage'][reward-type='progress-bar'] {
+					background-color: #fff;
+
+					&::before {
+						background-color: #fff;
+					}
+				}
+
+				&[widget='reward'][cart-type='cartDrawer'][reward-type='progress-bar'] {
+					color: #fff;
+				}
+			}
+		}
+
+		&[amote-shop='bestude.myshopify.com'] {
+			.amote-app[widget='reward'] {
+				&[reward-type='progress-bar'],
+				&[reward-type='free-gift'] {
+					color: #222;
+				}
+
+				&[widget='reward'][cart-type='cartPage'][reward-type='progress-bar'] {
+					background-color: #fff;
+
+					&::before {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+
+		&[amote-shop='easylace-8178.myshopify.com'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartPage'] .reward-progress-bar__text {
+				width: 270px;
+			}
+
+			.amote-app[widget='reward'][reward-type='discount'][cart-type='cartPage'] {
+				margin: 20px auto;
+			}
+
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				padding: 24px 10px 50px;
+			}
+
+			#upCart #UpcartPopup div.reward-discount__icon:empty {
+				display: flex;
+			}
+		}
+
+		&[amote-shop='skipthefamearchive.myshopify.com'] {
+			.amote-app[widget='reward'][reward-type='discount'][cart-type='cartPage'] {
+				margin: 20px auto;
+			}
+		}
+
+		&[amote-shop='sesuho-2332.myshopify.com'] {
+			.amote-app[widget='reward'][reward-type='progress-bar'][cart-type='cartDrawer'] {
+				--top-start-gift-box: 170px !important;
+			}
+		}
+
+		&[amote-shop='tomfyfe.myshopify.com'] {
+			.amote-app[reward-type='discount'][cart-type='cartDrawer'][widget='reward'] {
+				padding: 10px;
+			}
+		}
+
+		&[amote-shop='atomiclabatory.myshopify.com'] {
+			.amote-app[reward-type='discount'][cart-type='cartPage'][widget='reward'] {
+				max-width: 100%;
+			}
+		}
+
+		&[amote-shop='nubrox.myshopify.com'] {
+			.amote-app[widget='reward'][cart-type='cartDrawer'][reward-type='progress-bar'] {
+				border-top: unset;
+			}
+		}
+	}
+}
